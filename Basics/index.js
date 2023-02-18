@@ -1,61 +1,33 @@
-// //returns one element with the specified id
-// const title=document.getElementById('main-title');
-// console.log(title);
-
-// //returns array of element with class name
-// const listItems= document.getElementsByClassName('list-item');
-// console.log(listItems);
-
-// //returns array of elements in which order they appear
-// const li= document.getElementsByTagName('li');
-// console.log(li);
-
-// // returns first element thats matches the query
-// const container=document.querySelector('.container');
-// console.log(container);
-
-// //return nodelist of all elements that matches the query
-// const containers=document.querySelectorAll('.container');
-// console.log(containers);
-
 //DOM Manipulation
 
+// traverse the DOM
 
-//styling elements 
+let ul=document.querySelector('ul');
 
-// const title=document.getElementById('main-title');
-// title.style.color="Red";
-// //inline style does not work with multiple elements like query selectorall or get element by class
-// //need to loop to set style for such elements
-// console.log(title);
+//Parent Node Traversal
 
-//creating elements
+// console.log(ul.parentNode);
+// console.log(ul.parentElement.parentElement);
 
-const ul=document.querySelector('ul');
-const li=document.createElement('li');
-//adding elements
-ul.append(li);
+// const html=document.documentElement;
+// console.log(html.parentNode);
+// //below returns null, above returns document node
+// console.log(html.parentElement);
 
-//modifying the text
-li.innerText='X-men';
+//Child Node Traversal
 
-//modifying attributes and classes
-li.setAttribute('class','list-item');
-li.removeAttribute('class');
+// console.log(ul.childNodes);
+// console.log(ul.firstChild);
+// console.log(ul.lastChild);
+// ul.childNodes[1].style.backgroundColor = "blue";
+// console.log(ul.children);
+// console.log(ul.firstElementChild);
+// console.log(ul.lastElementChild);
 
-console.log(li.getAttribute('class'));
+//sibling Node Traversal
 
-li.classList.add('list-item');
+console.log(ul.previousSibling);
+console.log(ul.nextSibling);
 
-//removeElements
-
-li.remove();
-
-
-// const firstLi= document.querySelector('.list-item');
-// //just the text
-// console.log(firstLi.innerText);
-// //how it is written in html including elements insid, security issues dont use
-// console.log(firstLi.innerHTML);
-// //how it is written in html excluding elements inside
-// console.log(firstLi.textContent);
+console.log(ul.previousElementSibling);
+console.log(ul.nextElementSibling);
