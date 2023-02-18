@@ -1,33 +1,25 @@
-//DOM Manipulation
+// DOM Manipulation
 
-// traverse the DOM
+// Event Listeners
 
-let ul=document.querySelector('ul');
+//element.addEventListener("click",function);
 
-//Parent Node Traversal
+const buttonTwo=document.querySelector('.btn-2');
 
-// console.log(ul.parentNode);
-// console.log(ul.parentElement.parentElement);
+function alertBtn(){
+    alert('I also Love JS')
+}
 
-// const html=document.documentElement;
-// console.log(html.parentNode);
-// //below returns null, above returns document node
-// console.log(html.parentElement);
+buttonTwo.addEventListener("click",alertBtn);
 
-//Child Node Traversal
 
-// console.log(ul.childNodes);
-// console.log(ul.firstChild);
-// console.log(ul.lastChild);
-// ul.childNodes[1].style.backgroundColor = "blue";
-// console.log(ul.children);
-// console.log(ul.firstElementChild);
-// console.log(ul.lastElementChild);
+//MouseOver event
 
-//sibling Node Traversal
+const newBackground=document.querySelector('.box-3');
+function changeBgColor(){
+    newBackground.style.backgroundColor = 'blue';
+}
 
-console.log(ul.previousSibling);
-console.log(ul.nextSibling);
+newBackground.addEventListener("mouseover",changeBgColor);
 
-console.log(ul.previousElementSibling);
-console.log(ul.nextElementSibling);
+//addEventListener is most commonly used because we can add as many events as we want whereas in onevent method only 1 is possible
