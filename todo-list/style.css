@@ -5,3 +5,100 @@
     font-family: 'Lato',sans-serif;
 }
 
+body{
+    height:100vh;
+    background: url(bg1.jpg) no-repeat center center/cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#add-task-container{
+    min-width:350px;
+    width:100%;
+    padding:1em 0.5em;
+    background: #fff;
+    border-radius:1em;
+    box-shadow:0 0 1em;
+    margin-bottom: 1em;
+
+    display:flex;
+}
+
+input{
+    flex:5;
+    margin-right:0.7em;
+    border-radius:0.5em;
+    font-size: 1.2rem;
+    padding: 0.2em;
+}
+
+#add-task{
+    flex:0.7;
+    font-size:1.2rem;
+    padding:0.2em;
+    color:green;
+    border:green 1px solid;
+    border-radius: 0.5em;
+    transition:0.3s;
+}
+
+#add-task:hover{
+    background-color: green;
+    color:white;
+}
+
+/* styling for tasks which get added by js*/
+
+.task{
+    width:100%;
+    background-color:#fff;
+    border-radius: 0.5em;
+    box-shadow: 0 0 1em;
+    padding:0.5em;
+    margin-bottom: 0.5em;
+    display:flex;
+    justify-content: space-between;
+}
+
+.task li{
+    list-style: none;
+    flex:4;
+    padding:0 0.5em;
+    font-size:1.3rem;
+    margin:1em;
+}
+
+.task button{
+    flex:1;
+    border-radius:0.5em;
+    background-color: #fff;
+    cursor: pointer;
+    margin:0.5em 0;
+}
+
+.task .checkTask{
+    color:orange;
+    margin-right:5px;
+    border:solid 2px orange;
+    font-size:1.5rem;
+}
+
+.task .checkTask:hover{
+    background-color: orange;
+    color:white;
+}
+
+.task .deleteTask{
+    color:red;
+    margin-right:5px;
+    border:solid 2px red;
+    font-size:1.5rem;
+}
+
+.task .deleteTask:hover{
+    background-color: red;
+    color:white;
+}
+
+
